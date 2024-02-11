@@ -1,3 +1,4 @@
+import next from "next"
 import { headers } from "next/headers"
 import { NextRequest, NextResponse } from "next/server"
  
@@ -18,8 +19,16 @@ function getLocale(request: NextRequest) {
  }
  
 export function middleware(request: NextRequest) {
-  const response = NextResponse.next();
-  const { pathname } = request.nextUrl
+  const { pathname, searchParams } = request.nextUrl
+  let response = NextResponse.next();
+  const visitor = searchParams.get('v')
+  
+  if (visitor) {
+    request.nextUrl.searchParams.delete('v');
+    response = NextResponse.redirect(request.nextUrl)
+    response.cookies.set('visitor', visitor)
+  }
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )

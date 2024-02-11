@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import IntroPage from "./@intro/page";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -7,11 +8,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  intro
 }: Readonly<{
   children: React.ReactNode;
+  intro: React.ReactNode;
 }>) {
   return (
     <>
+        {intro}
         {children}
     </>
   );
