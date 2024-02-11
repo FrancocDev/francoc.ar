@@ -158,6 +158,7 @@ export default async function Home({
                 ? "Hola, preguntame lo que quieras..."
                 : "Hi, ask me anything..."
             }
+            language={lang as "es" | "en"}
           />
           <section className="flex flex-col gap-6">
             {data.basics.profiles.map((profile, i) => {

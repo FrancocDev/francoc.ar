@@ -5,14 +5,14 @@ import {useRouter} from "next/navigation";
 
 function ColorModeSwitcher({colorMode}: {colorMode: "dark" | "light"}) {
   const router = useRouter();
-
+  const lang = Cookies.get("lang");
   function handleToggle() {
     Cookies.set("theme", colorMode === "dark" ? "light" : "dark");
     router.refresh();
   }
 
   return (
-    <a role="button" onClick={handleToggle} className="w-[24px] h-[24px] flex items-center">
+    <a role="button" onClick={handleToggle} className="w-[24px] h-[24px] flex items-center" aria-label={lang === "es" ? "Cambiar tema" : "Change theme"}>
       {colorMode === "dark" ? (
         <svg height="16px" viewBox="0 0 24 24" width="16px">
           <path

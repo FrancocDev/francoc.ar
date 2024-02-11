@@ -10,7 +10,7 @@ type ChatProps = {
     sender: "user" | "system"
 }
 
-export default function Chat({firstMessage} : {firstMessage: string}) {
+export default function Chat({firstMessage, language} : {firstMessage: string, language: "es" | "en"}) {
     const [chat, setChat] = useState<ChatProps[]>([{id: crypto.randomUUID(), text: firstMessage, sender: "system"}])
     const [message, setMessage] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(false)
@@ -51,7 +51,7 @@ export default function Chat({firstMessage} : {firstMessage: string}) {
       </div>
       <form onSubmit={handleSubmit} className="flex flex-row gap-4 w-full">
         <input type="text" value={message} onChange={(event) => setMessage(event.target.value)} className="w-full p-4 rounded-md bg-slate-200 dark:bg-slate-900" />
-        <button type="submit" disabled={loading} className="p-4 rounded-md bg-blue-200 dark:bg-blue-900">
+        <button type="submit" aria-label={language === "es" ? "Enviar" : "Send"} disabled={loading} className="p-4 rounded-md bg-blue-200 dark:bg-blue-900">
             {loading ? <IconLoader2 className="animate-rotate-360 animate-iteration-count-infinite"/> : <IconSend />}
         </button>
       </form>
