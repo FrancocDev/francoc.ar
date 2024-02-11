@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "@google/generative-ai": "^0.2.0",
+    "@midudev/tailwind-animations": "^0.0.6",
+    "@tabler/icons-react": "^2.47.0",
     "@types/mousetrap": "^1.6.15",
     "js-cookie": "^3.0.5",
     "js-cookies": "^1.0.4",

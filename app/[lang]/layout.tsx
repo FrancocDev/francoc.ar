@@ -24,8 +24,8 @@ export default function RootLayout({children}: {children: React.ReactNode}) {;
           <Header colorMode={colorMode} language={language}/>
           <article className="relative px-4">{children}</article>
           <footer className="print:hidden border-t border-neutral-500/20 px-4 mt-24 py-4 flex items-center justify-between">
-            <p>
-              TEST
+            <p className="m-auto">
+              Franco Carrara - Hecho con ♥ y Next.js
             </p>
           </footer>
         </main>
