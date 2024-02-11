@@ -2,11 +2,11 @@
     "basics": {
       "name": "Franco Carrara",
       "label": "Frontend Developer",
-      "image": "https://porfolio.dev/midudev.webp",
+      "image": "",
       "email": "me@francoc.ar",
       "phone": "",
       "url": "https://francoc.ar",
-      "summary": "Soy un desarrollador frontend con una pasión por el desarrollo web y un fuerte enfoque en la experiencia del usuario y performance. \n Siempre estoy buscando nuevos retos y oportunidades para aprender y crecer.",
+      "summary": "I am a frontend developer with a passion for web development and a strong focus on user experience and performance. \n I am always looking for new challenges and opportunities to learn and grow.",
       "location": {
         "address": "",
         "postalCode": "3000",
@@ -39,7 +39,7 @@
     "education": [{
       "institution": "Universidad Nacional del Litoral",
       "url": "https://institution.com/",
-      "area": "Ingeniería Informática",
+      "area": "Computer Engineering",
       "studyType": "Ingeniería",
       "startDate": "2023-01-01",
       "endDate": "",
@@ -53,18 +53,85 @@
       "issuer": "Company",
       "url": "https://certificate.com"
     }],
-    "skills": [{
-      "name": "Desarrollo Web",
-      "level": "",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "TailwindCSS",
-        "Next.js"
-      ]
-    }],
+    "skills": [
+      {
+        "name": "HTML",
+        "level": "Master",
+        "keywords": [
+          "Desarrollo Web", "Frontend"
+        ]
+      },
+      {
+        "name": "CSS",
+        "level": "Master",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Diseño Responsive"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "level": "Master",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        ]
+      },
+      {
+        "name": "Tailwind",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        ]
+      },
+      {
+        "name": "Node",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "level": "Avanzado",
+        "keywords": [
+          "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+        ]
+      },
+      {
+        "name": "Git",
+        "level": "Avanzado",
+        "keywords": [
+          "Control de Versiones", "Colaboración", "Código Fuente"
+        ]
+      },
+      {
+        "name": "GitHub",
+        "level": "Avanzado",
+        "keywords": [
+          "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        ]
+      },
+      {
+        "name": "Next.js",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+        ]
+      },
+      {
+        "name": "React",
+        "level": "Avanzado",
+        "keywords": [
+          "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+        ]
+      }
+    ],
     "languages": [
       {
         "language": "Español",
@@ -76,8 +143,8 @@
     }], 
     "projects": [
       {
-        "name": "Seguimiento de mascotas",
-        "description": "Una aplicación para gestionar citas y seguimiento de mascotas.",
+        "name": "Pet tracking",
+        "description": "An application to manage appointments and pet tracking.",
         "highlights": [],
         "url": "https://patients.francoc.ar",
         "repository": "https://github.com/FrancocDev/patient-manager",
@@ -85,8 +152,8 @@
         "image": "/images/projects/patients.jpg"
       }
       ,{
-        "name": "Gestor de gastos",
-        "description": "Una aplicación para gestionar gastos y metas de ahorro con persistencia en el navegador.",
+        "name": "Expense manager",
+        "description": "An application to manage expenses and savings goals with persistence in the browser.",
         "highlights": [],
         "url": "https://expense.francoc.ar",
         "repository": "https://github.com/FrancocDev/expense-tracker",
@@ -94,8 +161,8 @@
         "image": "/images/projects/expenses.jpg"
       },
       {
-      "name": "Resumen de compra",
-      "description": "Una landing page de un resumen de compra. Desarrollada con HTML, CSS y JavaScript.",
+      "name": "Purchase summary",
+      "description": "A landing page of a purchase summary. Developed with HTML, CSS and JavaScript.",
       "highlights": [],
       "url": "https://order-summary.francoc.ar",
       "repository": "https://github.com/FrancocDev/order-summary",
@@ -103,8 +170,8 @@
       "image": "/images/projects/patients.jpg"
     },
     {
-      "name": "Precio de Criptomonedas",
-      "description": "Una landing page para obtener el precio de criptomonedas.",
+      "name": "Cryptocurrency Pricing",
+      "description": "A landing page to obtain the price of cryptocurrencies.",
       "highlights": [],
       "url": "https://crypto.francoc.ar",
       "github": "https://github.com/FrancocDev/crypto-prices",
