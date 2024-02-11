@@ -1,0 +1,115 @@
+{
+    "basics": {
+      "name": "Franco Carrara",
+      "label": "Frontend Developer",
+      "image": "https://porfolio.dev/midudev.webp",
+      "email": "me@francoc.ar",
+      "phone": "",
+      "url": "https://francoc.ar",
+      "summary": "Soy un desarrollador frontend con una pasión por el desarrollo web y un fuerte enfoque en la experiencia del usuario y performance. \n Siempre estoy buscando nuevos retos y oportunidades para aprender y crecer.",
+      "location": {
+        "address": "",
+        "postalCode": "3000",
+        "city": "Santa Fe",
+        "countryCode": "AR",
+        "region": "Santa Fe"
+      },
+      "profiles": [{
+        "network": "Twitter",
+        "username": "francocdev",
+        "url": "https://twitter.com/francocdev"
+      }, 
+      {
+        "network": "GitHub",
+        "username": "francocdev",
+        "url": "https://github.com/francocdev"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "francocarrara",
+        "url": "https://www.linkedin.com/in/francocarrara/"
+      },
+        {
+        "network": "Email",
+        "username": "me@francoc.ar",
+        "url": "mailto:me@francoc.ar"
+         }
+    ]
+    },
+    "education": [{
+      "institution": "Universidad Nacional del Litoral",
+      "url": "https://institution.com/",
+      "area": "Ingeniería Informática",
+      "studyType": "Ingeniería",
+      "startDate": "2023-01-01",
+      "endDate": "",
+      "score": "",
+      "courses": [
+      ]
+    }],
+    "certificates": [{
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }],
+    "skills": [{
+      "name": "Desarrollo Web",
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "TailwindCSS",
+        "Next.js"
+      ]
+    }],
+    "languages": [
+      {
+        "language": "Español",
+        "fluency": "Nativo"
+      },
+      {
+      "language": "Inglés",
+      "fluency": "Avanzado"
+    }], 
+    "projects": [
+      {
+        "name": "Seguimiento de mascotas",
+        "description": "Una aplicación para gestionar citas y seguimiento de mascotas.",
+        "highlights": [],
+        "url": "https://patients.francoc.ar",
+        "repository": "https://github.com/FrancocDev/patient-manager",
+        "tags": ["HTML", "CSS", "JavaScript", "React"],
+        "image": "/images/projects/patients.jpg"
+      }
+      ,{
+        "name": "Gestor de gastos",
+        "description": "Una aplicación para gestionar gastos y metas de ahorro con persistencia en el navegador.",
+        "highlights": [],
+        "url": "https://expense.francoc.ar",
+        "repository": "https://github.com/FrancocDev/expense-tracker",
+        "tags": ["HTML", "CSS", "JavaScript", "React"],
+        "image": "/images/projects/expenses.jpg"
+      },
+      {
+      "name": "Resumen de compra",
+      "description": "Una landing page de un resumen de compra. Desarrollada con HTML, CSS y JavaScript.",
+      "highlights": [],
+      "url": "https://order-summary.francoc.ar",
+      "repository": "https://github.com/FrancocDev/order-summary",
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "image": "/images/projects/patients.jpg"
+    },
+    {
+      "name": "Precio de Criptomonedas",
+      "description": "Una landing page para obtener el precio de criptomonedas.",
+      "highlights": [],
+      "url": "https://crypto.francoc.ar",
+      "github": "https://github.com/FrancocDev/crypto-prices",
+      "tags": ["HTML", "CSS", "JavaScript", "React"],
+      "image": "/projects/crypto.png"
+    }
+  ]
+  }
