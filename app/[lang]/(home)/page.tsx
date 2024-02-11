@@ -89,6 +89,7 @@ export default async function Home({
                       alt={project.name}
                       fill
                       layout=""
+                      loading="lazy"
                       className="rounded-lg transition duration-500 hover:scale-105 cursor-pointer"
                     />
                   </div>
