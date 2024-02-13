@@ -5,6 +5,7 @@ import { cookies, headers } from "next/headers";
 import Header from "../components/header";
 import Script from "next/script";
 import Umami from "../utils/umami";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500"], preload: true});
 
@@ -20,6 +21,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {;
   return (
     <html className={colorMode} lang={language}>
       <Umami/>
+      <SpeedInsights/>
       <body
         className={`${inter.className} bg-white dark:bg-slate-950 text-black/90 dark:text-white/90 overflow-x-hidden`}
       >
