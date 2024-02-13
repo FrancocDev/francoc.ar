@@ -18,8 +18,8 @@ function getLocale(request: NextRequest) {
     return 'es'
  }
 
-function logUmamiEvent(visitor: string){
-  fetch('https://umami.francoc.ar/api/send', {
+async function logUmamiEvent(visitor: string){
+  await fetch('https://umami.francoc.ar/api/send', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
