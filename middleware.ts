@@ -1,6 +1,6 @@
 import next from "next"
 import { headers } from "next/headers"
-import { NextRequest, NextResponse } from "next/server"
+import { NextRequest, NextResponse, userAgent } from "next/server"
  
 let locales = ['en', 'es']
  
@@ -17,6 +17,17 @@ function getLocale(request: NextRequest) {
   }
     return 'es'
  }
+
+function logUmamiEvent(visitor: string){
+  fetch('https://umami.francoc.ar/api/send', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'
+    },
+    body: JSON.stringify({payload: {name: "Visitors", website: process.env.UMAMI_TRAKING_CODE , data: {visitor: visitor}}, type: "event"})
+  })
+}
  
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl
@@ -24,6 +35,7 @@ export function middleware(request: NextRequest) {
   const visitor = searchParams.get('v')
   
   if (visitor) {
+    logUmamiEvent(visitor)
     request.nextUrl.searchParams.delete('v');
     response = NextResponse.redirect(request.nextUrl)
     response.cookies.set('visitor', visitor)
