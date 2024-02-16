@@ -81,7 +81,7 @@ export default async function Home({
         <ul className="flex flex-col gap-16">
           {data.projects.slice(0, 2).map((project, i) => (
             <li key={i}>
-              <article className="flex flex-row gap-8 justify-between">
+              <article className="flex flex-col lg:flex-row gap-8 justify-between">
                 <Link href={project.url}>
                   <div className="relative w-96 h-64">
                     <Image
@@ -151,7 +151,7 @@ export default async function Home({
         <h2 className="text-5xl text-bold mb-9">
           {lang === "es" ? "Contacto" : "Contact"}
         </h2>
-        <article className="flex flex-row gap-8">
+        <article className="flex flex-col lg:flex-row gap-8">
           <Chat
             firstMessage={
               lang === "es"
@@ -160,7 +160,7 @@ export default async function Home({
             }
             language={lang as "es" | "en"}
           />
-          <section className="flex flex-col gap-6">
+          <section className="w-full flex flex-row flex-wrap lg:flex-col gap-6">
             {data.basics.profiles.map((profile, i) => {
               const IconComponent =
                 socialNetworks[
