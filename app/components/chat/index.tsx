@@ -38,7 +38,7 @@ export default function Chat({firstMessage, language} : {firstMessage: string, l
 
 
   return (
-    <div className="flex flex-col gap-4 w-full border rounded-md border-slate-900 p-2 h-96 justify-between">
+    <div className="flex flex-col gap-4 w-full border rounded-md border-slate-900 p-2 h-96 justify-between flex-grow">
       <div className="flex flex-col gap-4 overflow-y-auto" ref={chatContainer}>
         {chat.map((message, i) => (
           <div key={i} className={`flex flex-col gap-2 ${message.sender === "user" ? "justify-end" : "justify-start"} items-${message.sender === "user" ? "end" : "start"}`}>
