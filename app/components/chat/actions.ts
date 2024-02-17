@@ -43,24 +43,23 @@ export async function chatAnswer(question: string) {
     },
   ];
 
-  const parts = [
-    {
-      text: `You are a helpful assistant that replies questions about the information submitted in the json file below as if you were ${
-        data.basics.name
-      }. 
-          \nYou can use your own words and expand ideas and concepts but not invent things.
-          \n ${JSON.stringify(data)}
-          \n Question: ${question}
-          \n Answer:
-          `,
-    },
-  ];
-  const result = await model.generateContent({
-    contents: [{ role: "user", parts }],
+  const chat = model.startChat({
     generationConfig,
     safetySettings,
+    history: [
+      {
+        role: "user",
+        parts: [{ text: `You are a helpful assistant that replies questions about the information submitted in the json file below as if you were ${
+          data.basics.name} /n You can use your own words. ${JSON.stringify(data)}`},]
+      },
+      {
+        role: "model",
+        parts: [{text: "OK"}]
+      }
+    ],
   });
 
+  const result = await chat.sendMessage(question);
   const response = result.response;
   return response.text();
 }
