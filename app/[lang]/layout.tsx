@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "@/app/globals.css";
 import { cookies, headers } from "next/headers";
 import Header from "../components/header";
-import Script from "next/script";
 import Umami from "../utils/umami";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
