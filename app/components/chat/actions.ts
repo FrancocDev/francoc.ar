@@ -13,7 +13,6 @@ export async function chatAnswer(question: string) {
 
   const MODEL_NAME = process.env.GEMINI_MODEL_NAME;
   const API_KEY = process.env.GEMINI_API_KEY;
-  console.log(API_KEY)
 
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME });
@@ -63,6 +62,5 @@ export async function chatAnswer(question: string) {
   });
 
   const response = result.response;
-  console.log(response.text());
   return response.text();
 }
