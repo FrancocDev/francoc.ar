@@ -143,6 +143,15 @@
     }], 
     "projects": [
       {
+        "name": "Investment app",
+        "description": "An application to calculate an investement and its earnings.",
+        "highlights": [],
+        "url": "investment-francocdev.vercel.app",
+        "repository": "https://github.com/FrancocDev/investment",
+        "tags": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Puppeteer", "Tailwind", "Zustand"], 
+        "image": "/images/projects/investment.jpg"
+      },
+      {
         "name": "Pet tracking",
         "description": "An application to manage appointments and pet tracking.",
         "highlights": [],
