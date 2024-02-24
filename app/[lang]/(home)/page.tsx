@@ -79,7 +79,7 @@ export default async function Home({
           {lang === "es" ? "Proyectos" : "Projects"}
         </h2>
         <ul className="flex flex-col gap-16">
-          {data.projects.slice(0, 2).map((project, i) => (
+          {data.projects.slice(0, 3).map((project, i) => (
             <li key={i}>
               <article className="flex flex-col md:flex-row gap-8 justify-between">
                 <Link href={project.url}>
