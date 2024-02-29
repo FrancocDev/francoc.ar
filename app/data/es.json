@@ -151,7 +151,7 @@
         "name": "Calculadora de inversiones",
         "description": "Una calculadora para simular los rendimientos obtenidos en distintas plataformas.",
         "highlights": [],
-        "url": "investment-francocdev.vercel.app",
+        "url": "https://investment-francocdev.vercel.app",
         "repository": "https://github.com/FrancocDev/investment",
         "tags": ["HTML", "CSS", "JavaScript", "React", "Next.js", "Puppeteer", "Tailwind", "Zustand"], 
         "image": "/images/projects/investment.jpg"
@@ -160,7 +160,7 @@
         "name": "Seguimiento de mascotas",
         "description": "Una aplicación para gestionar citas y seguimiento de mascotas.",
         "highlights": [],
-        "url": "veterinary-patients-francocdev.vercel.app",
+        "url": "https://veterinary-patients-francocdev.vercel.app",
         "repository": "https://github.com/FrancocDev/patient-manager",
         "tags": ["HTML", "CSS", "JavaScript", "React"],
         "image": "/images/projects/patients.jpg"
