@@ -126,6 +126,8 @@ export default async function Home({
                     <Link
                       href={project.repository}
                       className="text-xl text-bold flex items-center gap-2 bg-gray-200 dark:bg-slate-900 p-2 rounded-lg no-underline transition duration-300 hover:scale-105"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <IconBrandGithub />
                       {lang === "es" ? "Ver código" : "View code"}
