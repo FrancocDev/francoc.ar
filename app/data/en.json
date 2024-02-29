@@ -33,6 +33,11 @@
         "network": "Email",
         "username": "me@francoc.ar",
         "url": "mailto:me@francoc.ar"
+         },
+         {
+          "network": "cv",
+          "username": "Download CV",
+          "url": "./cv/Franco Carrara - Frontend developer [Feb 2024].pdf"
          }
     ]
     },

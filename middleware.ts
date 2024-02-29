@@ -62,7 +62,7 @@ export const config = {
   matcher: [
     // Skip all internal paths (_next)
     //'/((?!_next).*)'
-    '/((?!api|_next/static|_next/image|images|favicon.ico).*)',
+    '/((?!api|_next/static|_next/image|images|cv|favicon.ico).*)',
     // Optional: only run on root (/) URL
     // '/'
   ],

@@ -17,6 +17,7 @@ import {
   IconBrandMongodb,
   IconBrandGit,
   IconExternalLink,
+  IconFileCv,
 } from "@tabler/icons-react";
 import React from "react";
 import { IconBrandMysql } from "@tabler/icons-react";
@@ -26,6 +27,7 @@ const socialNetworks: Record<string, React.ElementType> = {
   twitter: IconBrandTwitter,
   github: IconBrandGithub,
   email: IconMail,
+  cv: IconFileCv
 };
 
 const skillsIcons: Record<string, React.ElementType> = {
@@ -113,6 +115,8 @@ export default async function Home({
                     <Link
                       href={project.url}
                       className="text-xl text-bold flex items-center gap-2 bg-gray-200 dark:bg-slate-900 p-2 rounded-lg no-underline transition duration-300 hover:scale-105"
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       <IconExternalLink />
                       {lang === "es" ? "Sitio Web" : "Website"}
@@ -171,6 +175,8 @@ export default async function Home({
                   href={profile.url}
                   key={i}
                   className="flex flex-row gap-2"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
                   {IconComponent && <IconComponent />}
                   <span className="text-lg">{profile.username}</span>
