@@ -96,7 +96,7 @@ export default async function Home({
                     />
                   </div>
                 </Link>
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between flex-1">
                   <header className="flex flex-col gap-4">
                     <h3 className="text-4xl text-bold">{project.name}</h3>
                     <div className="flex gap-2 flex-wrap">
