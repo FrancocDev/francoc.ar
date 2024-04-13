@@ -24,13 +24,13 @@ export default function RootLayout({children}: {children: React.ReactNode}) {;
       <body
         className={`${inter.className} bg-white dark:bg-slate-950 text-black/90 dark:text-white/90 overflow-x-hidden`}
       >
-        <main className="max-w-4xl m-auto">
+        <main className="max-w-5xl m-auto">
           <Header colorMode={colorMode} language={language}/>
           <article className="relative px-4">{children}</article>
           <footer className="print:hidden border-t border-neutral-500/20 px-4 mt-24 py-4 flex items-center justify-between">
             <p className="m-auto">
-              Franco Carrara - Hecho con ♥ y Next.js
-            </p>
+              {language === "es" ? "Hecho con ♥ en Next.js y Tailwind CSS. Inspirado en el portfolio de Midudev y de Goncy." : "Made with ♥ in Next.js and Tailwind CSS. Inspired by Midudev's and Goncy's portfolio."}
+             </p>
           </footer>
         </main>
       </body>
