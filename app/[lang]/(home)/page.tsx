@@ -58,7 +58,7 @@ export default async function Home({
 
   return (
     <main className="flex min-h-screen flex-col items-center gap-40">
-      <section className="flex flex-row gap-24 items-start">
+      <section className="flex flex-row gap-24 items-start w-full">
         <div>
           <h1 className="text-6xl text-bold mb-9">
             {lang === "es" ? "Hola, soy " : "Hey, I'm "}
