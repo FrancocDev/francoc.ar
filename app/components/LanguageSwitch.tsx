@@ -12,7 +12,9 @@ function LanguageSwitch({ language }: { language: "es" | "en" }) {
     function handleToggle() {
         Cookies.set("lang", language === "es" ? "en" : "es");
         router.replace(
-            `/${language === "es" ? "en" : "es"}${pathname.split("/")[2] || ""}`
+            `/${language === "es" ? "en" : "es"}${
+                pathname?.split("/")[2] || ""
+            }`
         );
     }
 
