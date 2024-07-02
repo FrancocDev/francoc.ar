@@ -3,7 +3,7 @@ const nextConfig = {
     images:{
         remotePatterns: [
             {
-                hostname: 'porfolio.dev'
+                hostname: 'assets.tina.io'
             }
         ] 
     }
