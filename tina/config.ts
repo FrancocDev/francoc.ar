@@ -25,7 +25,14 @@ export default defineConfig({
             publicFolder: "public",
         },
     },
-    // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
+    search: {
+        tina: {
+            indexerToken: process.env.TINA_SEARCH_TOKEN,
+            stopwordLanguages: ["eng", "spa"],
+        },
+        indexBatchSize: 100,
+        maxSearchIndexFieldLength: 100,
+    },
     schema: {
         collections: [
             {
@@ -58,6 +65,14 @@ export default defineConfig({
                         name: "title",
                         label: "Title",
                         isTitle: true,
+                        required: true,
+                    },
+                    { type: "boolean", name: "featured", label: "Featured" },
+                    { type: "boolean", name: "published", label: "Published" },
+                    {
+                        type: "datetime",
+                        name: "date",
+                        label: "Date",
                         required: true,
                     },
                     {
@@ -133,6 +148,185 @@ export default defineConfig({
                         name: "icon",
                         label: "Icon",
                         required: true,
+                    },
+                ],
+            },
+            {
+                name: "socialNetworks",
+                label: "Social Networks",
+                path: "content/socialNetworks",
+                fields: [
+                    {
+                        type: "string",
+                        name: "name",
+                        label: "Name",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "url",
+                        label: "URL",
+                        required: true,
+                    },
+                    {
+                        type: "image",
+                        name: "icon",
+                        label: "Icon",
+                        required: true,
+                    },
+                ],
+            },
+            {
+                name: "certificates",
+                label: "Certificates",
+                path: "content/certificates",
+                fields: [
+                    {
+                        type: "string",
+                        name: "name",
+                        label: "Name",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "datetime",
+                        name: "date",
+                        label: "Date",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "issuer",
+                        label: "Issuer",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "url",
+                        label: "URL",
+                        required: true,
+                    },
+                    {
+                        type: "image",
+                        name: "image",
+                        label: "Image",
+                        required: true,
+                    },
+                ],
+            },
+            {
+                name: "languages",
+                label: "Languages",
+                path: "content/languages",
+                fields: [
+                    {
+                        type: "string",
+                        name: "language",
+                        label: "Language",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "fluency",
+                        label: "Fluency",
+                        required: true,
+                    },
+                ],
+            },
+            {
+                name: "education",
+                label: "Education",
+                path: "content/education",
+                fields: [
+                    {
+                        type: "string",
+                        name: "institution",
+                        label: "Institution",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "url",
+                        label: "URL",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "area",
+                        label: "Area",
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "studyType",
+                        label: "Study Type",
+                        required: true,
+                    },
+                    {
+                        type: "datetime",
+                        name: "startDate",
+                        label: "Start Date",
+                        required: true,
+                    },
+                    {
+                        type: "datetime",
+                        name: "endDate",
+                        label: "End Date",
+                    },
+                    {
+                        type: "string",
+                        name: "score",
+                        label: "Score",
+                    },
+                    {
+                        type: "object",
+                        label: "Courses",
+                        name: "courses",
+                        list: true,
+                        ui: {
+                            itemProps: (item) => {
+                                return { label: item?.name };
+                            },
+                        },
+                        fields: [
+                            {
+                                name: "name",
+                                type: "string",
+                                required: true,
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                name: "sections",
+                label: "Page Sections",
+                path: "content/sections",
+                fields: [
+                    {
+                        type: "string",
+                        name: "name",
+                        label: "Name",
+                        isTitle: true,
+                        required: true,
+                    },
+                    {
+                        type: "string",
+                        name: "subtitle",
+                        label: "Subtitle",
+                    },
+                    {
+                        type: "rich-text",
+                        name: "description",
+                        label: "Description",
+                    },
+                    {
+                        type: "image",
+                        name: "image",
+                        label: "Image",
                     },
                 ],
             },

@@ -8,20 +8,10 @@ import {
     IconMail,
     IconBrandGithub,
     IconBrandTwitter,
-    IconBrandReact,
-    IconBrandNextjs,
-    IconBrandTailwind,
-    IconBrandTypescript,
-    IconBrandJavascript,
-    IconBrandCss3,
-    IconBrandHtml5,
-    IconBrandMongodb,
-    IconBrandGit,
     IconExternalLink,
     IconFileCv,
 } from "@tabler/icons-react";
 import React from "react";
-import { IconBrandMysql } from "@tabler/icons-react";
 
 const socialNetworks: Record<string, React.ElementType> = {
     linkedin: IconBrandLinkedin,
@@ -29,20 +19,6 @@ const socialNetworks: Record<string, React.ElementType> = {
     github: IconBrandGithub,
     email: IconMail,
     cv: IconFileCv,
-};
-
-const skillsIcons: Record<string, React.ElementType> = {
-    react: IconBrandReact,
-    nextjs: IconBrandNextjs,
-    tailwind: IconBrandTailwind,
-    typescript: IconBrandTypescript,
-    javascript: IconBrandJavascript,
-    css: IconBrandCss3,
-    html: IconBrandHtml5,
-    mongodb: IconBrandMongodb,
-    git: IconBrandGit,
-    github: IconBrandGithub,
-    mysql: IconBrandMysql,
 };
 
 export default async function Home({
@@ -167,31 +143,11 @@ export default async function Home({
                         ))}
                 </ul>
             </section>
-            <section>
+            <section className="w-full">
                 <h2 className="text-5xl text-bold mb-9">
                     {lang === "es" ? "Habilidades" : "Skills"}
                 </h2>
-                <ul className="flex gap-4 flex-wrap">
-                    {/* {data.skills.map((skill, i) => {
-                        const IconComponent =
-                            skillsIcons[
-                                skill.name
-                                    .toLowerCase()
-                                    .replaceAll(
-                                        ".",
-                                        ""
-                                    ) as keyof typeof skillsIcons
-                            ];
-                        return (
-                            <li
-                                key={i}
-                                className="flex gap-2 bg-slate-100 dark:bg-slate-900 p-2 rounded-md"
-                            >
-                                {IconComponent && <IconComponent />}
-                                <span>{skill.name}</span>
-                            </li>
-                        );
-                    })} */}
+                <ul className="flex gap-4 flex-wrap w-full justify-start">
                     {technologiesResponse?.data?.technologiesConnection?.edges
                         ?.filter(
                             (projects) =>

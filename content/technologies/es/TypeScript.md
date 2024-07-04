@@ -1,7 +1,7 @@
 ---
 name: TypeScript
 keywords:
-  - Desarrollo Web
+  - Web development
   - Frontend
   - Backend
   - JavaScript Superset
