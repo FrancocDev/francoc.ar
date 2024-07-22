@@ -3,23 +3,8 @@ import { Data } from "@/app/data/data.types";
 import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/tina/__generated__/client";
-import {
-    IconBrandLinkedin,
-    IconMail,
-    IconBrandGithub,
-    IconBrandTwitter,
-    IconExternalLink,
-    IconFileCv,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import React from "react";
-
-const socialNetworks: Record<string, React.ElementType> = {
-    linkedin: IconBrandLinkedin,
-    twitter: IconBrandTwitter,
-    github: IconBrandGithub,
-    email: IconMail,
-    cv: IconFileCv,
-};
 
 export default async function Home({
     params: { lang } = { lang: "es" },
@@ -33,8 +18,14 @@ export default async function Home({
         .split("\n")
         .map((p, i) => <p key={i}>{p}</p>);
 
-    const projectsResponse = await client.queries.projectsConnection();
+    const projectsResponse = await client.queries.projectsConnection({
+        filter: { published: { eq: true } },
+        sort: "featured-date",
+        last: 10,
+    });
     const technologiesResponse = await client.queries.technologiesConnection();
+    const socialNetworksResponse =
+        await client.queries.socialNetworksConnection();
 
     return (
         <main className="flex min-h-screen flex-col items-center gap-40">
@@ -188,26 +179,35 @@ export default async function Home({
                         language={lang as "es" | "en"}
                     />
                     <section className="flex flex-row flex-wrap md:flex-col gap-6 flex-shrink">
-                        {data.basics.profiles.map((profile, i) => {
-                            const IconComponent =
-                                socialNetworks[
-                                    profile.network.toLowerCase() as keyof typeof socialNetworks
-                                ];
-                            return (
-                                <Link
-                                    href={profile.url}
-                                    key={i}
-                                    className="flex flex-row gap-2"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                >
-                                    {IconComponent && <IconComponent />}
-                                    <span className="text-lg">
-                                        {profile.username}
-                                    </span>
-                                </Link>
-                            );
-                        })}
+                        {socialNetworksResponse?.data?.socialNetworksConnection?.edges
+                            ?.filter(
+                                (socialNetwork) =>
+                                    socialNetwork?.node?._sys.breadcrumbs[0] ===
+                                    lang
+                            )
+                            .map((profile, i) => {
+                                if (!profile?.node?.icon) return;
+                                return (
+                                    <Link
+                                        href={profile?.node?.url}
+                                        key={i}
+                                        className="flex flex-row gap-2"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                    >
+                                        <Image
+                                            src={profile?.node?.icon}
+                                            alt={profile?.node?.name}
+                                            width={24}
+                                            height={24}
+                                            className="dark:invert"
+                                        />
+                                        <span className="text-lg">
+                                            {profile?.node?.name}
+                                        </span>
+                                    </Link>
+                                );
+                            })}
                     </section>
                 </article>
             </section>

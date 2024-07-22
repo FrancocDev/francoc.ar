@@ -59,6 +59,12 @@ export default defineConfig({
                 name: "projects",
                 label: "Projects",
                 path: "content/projects",
+                indexes: [
+                    {
+                        name: "featured-date",
+                        fields: [{ name: "featured" }, { name: "date" }],
+                    },
+                ],
                 fields: [
                     {
                         type: "string",
