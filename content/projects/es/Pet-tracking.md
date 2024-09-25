@@ -3,7 +3,7 @@ title: Pet tracking
 featured: true
 published: true
 date: 2023-12-30T03:00:00.000Z
-description: An application to manage appointments and pet tracking.
+description: Una aplicación para gestionar las citas y el seguimiento de mascotas.
 website: 'https://veterinary-patients-francocdev.vercel.app'
 github: 'https://github.com/FrancocDev/patient-manager'
 image: /images/projects/patients.jpg
